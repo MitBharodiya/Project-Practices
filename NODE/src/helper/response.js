@@ -10,6 +10,24 @@ const returnSuccess = (message, data = {}) => {
   };
 };
 
+const createSuccess = (message, data = {}) => {
+  return {
+    status: 201,
+    success: true,
+    message: responseMessage.addDataSuccess(message),
+    data,
+  };
+};
+
+const getSuccess = (message, data = {}) => {
+  return {
+    status: 200,
+    success: true,
+    message: responseMessage.getDataSuccess(message),
+    data,
+  };
+};
+
 // Error response function
 const returnError = (status, error) => {
   // Log the error for debugging purposes
@@ -22,4 +40,4 @@ const returnError = (status, error) => {
   };
 };
 
-export { returnSuccess, returnError };
+export { createSuccess,getSuccess,returnSuccess, returnError };

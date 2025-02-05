@@ -9,26 +9,25 @@ const postSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  likes:[{
-    type:mongoose.Schema.type.ObjectId,
-    ref:"Like"
+  likes: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Like"
   }],
-  comments:[{
-    type:mongoose.Schema.type.ObjectId,
-    ref:"Comment"
+  comments: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Comment"
   }],
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
-    required: true
   },
   deleted: {
     type: Boolean,
     default: false
   }
-},{
-  timestamps: true,
-})
+}, {
+  timestamps: true
+});
 
 const Post = mongoose.model("Post", postSchema);
 export default Post;
