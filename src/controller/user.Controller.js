@@ -1,4 +1,4 @@
-import {createSuccess,getSuccess, returnSuccess, returnError } from "../helper/response.js";
+import {createSuccess,getSuccess, returnSuccess,updateSuccess,returnError } from "../helper/response.js";
 import UserService from "../service/user.Service.js";
 
 class UserController {
@@ -47,7 +47,7 @@ class UserController {
       if(!userId) return res.status(400).json(returnError(400, "User id is required"));
       if(!req.body) return res.status(400).json(returnError(400, "User data is required"));
       const user = await this.userService.updateUser(userId,req.body);
-      return res.status(200).json(returnSuccess("user", user));
+      return res.status(200).json(updateSuccess("user", user));
     } catch (error) {
       if(error.message.includes("User not found"))
       return res.status(404).json(returnError(404, error.message));

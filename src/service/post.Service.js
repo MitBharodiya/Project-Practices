@@ -23,9 +23,9 @@ class PostService {
     }
   }
 
-  async getAllPost() {
+  async getAllPost(offset, limit) {
     try {
-      const posts = await this.postDao.getAllPost();
+      const posts = await this.postDao.getAllPost(offset, limit);
       return posts;
     } catch (error) {
       throw new Error(`Error getting posts: ${error.message}`);

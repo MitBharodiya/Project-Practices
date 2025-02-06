@@ -28,6 +28,22 @@ const getSuccess = (message, data = {}) => {
   };
 };
 
+const updateSuccess = (message, data = {}) => {
+  return {
+    status: 200,
+    success: true,
+    message: responseMessage.updateDataSuccess(message),
+    data,
+  };
+};
+
+const deleteSuccess = (message) => {
+  return {
+    status: 200,
+    success: true,
+    message: responseMessage.deleteDataSuccess(message),
+  };
+}
 // Error response function
 const returnError = (status, error) => {
   // Log the error for debugging purposes
@@ -40,4 +56,4 @@ const returnError = (status, error) => {
   };
 };
 
-export { createSuccess,getSuccess,returnSuccess, returnError };
+export { createSuccess,getSuccess,returnSuccess, returnError,updateSuccess };

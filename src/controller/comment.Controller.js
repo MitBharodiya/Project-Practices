@@ -1,4 +1,4 @@
-import { createSuccess,getSuccess,returnSuccess, returnError } from "../helper/response.js";
+import { createSuccess,getSuccess,returnSuccess, returnError,updateSuccess } from "../helper/response.js";
 import CommentService from "../service/comment.Service.js";
 
 class CommentController {
@@ -61,7 +61,7 @@ class CommentController {
       const commentId = req.params.id;
       const commentData = req.body;
       const updatedComment = await this.commentService.updateComment(commentId, commentData);
-      return res.status(200).json(returnSuccess("comment", updatedComment));
+      return res.status(200).json(updateSuccess("comment", updatedComment));
     } catch (error) {
       return res.status(500).json(returnError(500, error));
     }

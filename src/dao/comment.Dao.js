@@ -48,7 +48,7 @@ class CommentDao {
   async getComment(commentId) {
     try {
       const comment = await Comment.findById(commentId)
-      .populate("user")  // Ensure the field names match your schema
+      .populate("user")
       .populate("post")
       .exec();
       return comment;
