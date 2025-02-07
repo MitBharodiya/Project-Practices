@@ -1,4 +1,4 @@
-import { redisClient } from "./redisClient.js";
+import { redisClient } from "../config/redis.js";
 
 class CacheManager {
   constructor(expirationTime = 3600) {
@@ -39,4 +39,4 @@ class CacheManager {
   }
 }
 
-export default new CacheManager();
+export default  CacheManager;
