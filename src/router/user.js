@@ -41,7 +41,7 @@ router.get("/:id", userController.getUser);
  *         required: true
  *         schema:
  *           type: string
- *           example: 67a0582829829770821cb58c
+ *           example: 67a1e73bc58199b77fa8d187
  *     requestBody:
  *       required: true
  *       content:
@@ -72,7 +72,7 @@ router.put("/:id", userController.updateUser);
  *         required: true
  *         schema:
  *           type: string
- *           example: 67a0582829829770821cb58c
+ *           example: 67a1e73bc58199b77fa8d187
  *     responses:
  *       200:
  *         description: User deleted successfully
