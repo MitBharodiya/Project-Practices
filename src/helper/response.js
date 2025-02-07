@@ -56,4 +56,4 @@ const returnError = (status, error) => {
   };
 };
 
-export { createSuccess,getSuccess,returnSuccess, returnError,updateSuccess };
+export { createSuccess,getSuccess,returnSuccess, returnError,updateSuccess,deleteSuccess };

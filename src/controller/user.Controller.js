@@ -1,4 +1,4 @@
-import {createSuccess,getSuccess, returnSuccess,updateSuccess,returnError } from "../helper/response.js";
+import {createSuccess,getSuccess,updateSuccess,returnError,deleteSuccess } from "../helper/response.js";
 import UserService from "../service/user.Service.js";
 
 class UserController {
@@ -60,7 +60,7 @@ class UserController {
       const userId = req.params.id;
       if(!userId) return res.status(400).json(returnError(400, "User id is required"));
       const user = await this.userService.deleteUser(userId);
-      return res.status(200).json(returnSuccess("user", user));
+      return res.status(200).json(deleteSuccess("user", user));
     } catch (error) {
       if(error.message.includes("User not found"))
       return res.status(404).json(returnError(404, error.message));

@@ -20,7 +20,7 @@ router.post('/', userController.createUser);
  *         required: true
  *         schema:
  *           type: string
- *           example: 67a1e73bc58199b77fa8d187  # MongoDB ObjectId example
+ *           example: 67a1b8a6db9231ba92563444  # MongoDB ObjectId example
  *     responses:
  *       201:
  *         description: User details
