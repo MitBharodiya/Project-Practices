@@ -6,6 +6,7 @@ import router from "./src/router/index.js";
 import swaggerUI from "swagger-ui-express";
 import swaggerSpec from "./src/config/swagger.js";
 import cors from "cors";
+import logger from "./src/utils/logger.js";
 
 
 const app = express();
@@ -26,4 +27,7 @@ app.use("/api", router);
 
 app.get("/", (req, res) => res.send("Hello World!"));
 
-app.listen(config.port, () => console.log(`Server running on port ${config.port}`));
+app.listen(config.port, () => {
+  logger.info(`Server running on port ${config.port}`);
+  // console.log(`Server running on port ${config.port}`)
+});

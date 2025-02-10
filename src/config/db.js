@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import logger from "../utils/logger.js";
 
 
 const connectDB = async () => {
@@ -6,9 +7,11 @@ const connectDB = async () => {
     const conn = await mongoose.connect(process.env.MONGO_URI,
       // {useNewUrlParser: true, useUnifiedTopology: true}
     );
-    console.log(`MongoDB Connected: ${conn.connection.host}`);
+    logger.info(`MongoDB Connected: ${conn.connection.host}`);
+    // console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
-    console.log(`Error: ${error.message}`);
+    logger.error(`Error: ${error.message}`);
+    // console.log(`Error: ${error.message}`);
     process.exit(1);
   }
 };

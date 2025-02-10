@@ -1,5 +1,5 @@
 import responseMessage from "./response.Message.js";
-
+import logger from "../utils/logger.js";
 // Success response function
 const returnSuccess = (message, data = {}) => {
   return {
@@ -47,7 +47,7 @@ const deleteSuccess = (message) => {
 // Error response function
 const returnError = (status, error) => {
   // Log the error for debugging purposes
-  console.error(error);
+  logger.error(error);
   return {
     status,
     success: false,
