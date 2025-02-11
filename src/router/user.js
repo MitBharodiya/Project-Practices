@@ -2,11 +2,44 @@ import express from "express";
 import userController from "../controller/user.Controller.js"; // Ensure this path is correct
 const router = express.Router();
 
-router.post('/', userController.createUser);
+// router.post('/', userController.createUser);
 // router.get('/:id',userController.getUser);
-// router.get('/',userController.getAllUser);
 // router.put('/:id',userController.updateUser);
 // router.delete('/:id',userController.deleteUser);
+// router.get('/',userController.getAllUser);
+
+
+/**
+ * @swagger
+ * /api/user:
+ *   post:
+ *     summary: Create a new user
+ *     description: Adds a new user to the database.
+ *     tags:
+ *       - Users
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 example: "John Doe"
+ *               email:
+ *                 type: string
+ *                 example: "john.doe@example.com"
+ *               password:
+ *                 type: string
+ *                 example: "password123"
+ *     responses:
+ *       201:
+ *         description: User created successfully.
+ *       400:
+ *         description: Bad request.
+ */
+router.post('/', userController.createUser);
 
 /**
  * @swagger
@@ -80,5 +113,20 @@ router.put("/:id", userController.updateUser);
  *         description: User not found
  */
 router.delete("/:id", userController.deleteUser);
+
+/**
+ * @swagger
+ * /api/user:
+ *   get:
+ *     summary: Get all users
+ *     description: Fetches all users from the database.
+ *     responses:
+ *       200:
+ *         description: List of users
+ *       404:
+ *         description: No users found
+ * */
+router.get("/", userController.getAllUser);
+
 
 export default router;
