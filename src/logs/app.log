@@ -180,3 +180,12 @@
 2025-02-13T10:13:58.471Z [INFO]: Server running on port 9090
 2025-02-13T10:13:58.993Z [INFO]: Redis Connected Successfully!
 2025-02-13T10:13:59.478Z [INFO]: MongoDB Connected: cluster0-shard-00-01.jr57q.mongodb.net
+2025-02-13T11:33:38.682Z [INFO]: Server running on port 9090
+2025-02-13T11:33:39.221Z [INFO]: Redis Connected Successfully!
+2025-02-13T11:33:39.886Z [INFO]: MongoDB Connected: cluster0-shard-00-02.jr57q.mongodb.net
+2025-02-13T11:34:00.833Z [INFO]: Server running on port 9090
+2025-02-13T11:34:01.619Z [INFO]: Redis Connected Successfully!
+2025-02-13T11:34:02.354Z [INFO]: MongoDB Connected: cluster0-shard-00-02.jr57q.mongodb.net
+2025-02-13T11:36:19.504Z [INFO]: Server running on port 9090
+2025-02-13T11:36:19.993Z [INFO]: Redis Connected Successfully!
+2025-02-13T11:36:20.404Z [INFO]: MongoDB Connected: cluster0-shard-00-00.jr57q.mongodb.net

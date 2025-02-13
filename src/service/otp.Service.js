@@ -18,7 +18,7 @@ class OtpService {
       //   await this.cacheManager.setCache(cachekey,otp);
       //   logger.info(otp);
       // };
-      return createSuccess("otp", otp);
+      
     } catch (error) {
       logger.error(error);
       return returnError(500, error);
