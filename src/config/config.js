@@ -19,6 +19,11 @@ const config = {
     password: process.env.REDIS_PASSWORD,
     username: process.env.REDIS_USERNAME,
     url:process.env.REDIS_URL
+  },
+  otp:{
+    smsapiurl:process.env.SMSAPIURL,
+    apikey:process.env.APIKEY,
+    sender:process.env.SENDER
   }
 }
 

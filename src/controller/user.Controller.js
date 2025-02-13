@@ -86,6 +86,32 @@ class UserController {
       return res.status(500).json(returnError(500, error));
     }
   }
+
+  authRoutes = async(req,res)=>{
+    try {
+      
+    } catch (error) {
+      
+    }
+  }
+
+
+  // recoverAccount = async(req,res)=>{
+  //   try {
+  //     const {email,mobile,} = req.body;
+  //     if((email==="" || mobile==="") || (!email || !mobile)) return res.status(400).json(returnError(400, "User Info is required"));
+  //     const user = await this.userService.recoverAccount();
+  //     // logger.info(`User recovered: ${user._id}`);
+  //     return res.status(200).json(updateSuccess("user", user));
+  //   } catch (error) {
+  //     if(error.message.includes("User not found")){
+  //       logger.error(`User not found: ${error.message}`);
+  //       return res.status(404).json(returnError(404, error.message));
+  //     }
+  //     logger.error(`Error recovering user: ${error.message}`);
+  //     return res.status(500).json(returnError(500, error));
+  //   }
+  // }
 }
 
 export default new UserController();
