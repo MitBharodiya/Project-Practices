@@ -11,6 +11,7 @@ class UserService {
   async createUser(userData) {
     try {
       const createdUser = await this.userDao.createUser(userData);
+      if(createdUser){await this.cacheManager.setCache(`user:${createdUser._id}`,createdUser);}
       return createdUser;
     } catch (error) {
       throw new Error("Error creating user: " + error.message);

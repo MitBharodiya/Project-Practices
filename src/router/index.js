@@ -1,5 +1,6 @@
 import express, { Router } from "express";
 import user from "./user.js";
+import auth from "./auth.js";
 import post from "./post.js";
 import comment from "./comment.js";
 import like from "./like.js";
@@ -11,6 +12,10 @@ const defaultRouter = [
   {
     path: "/user",
     router: user
+  },
+  {
+    path: "/auth",
+    router: auth
   },
   {
     path: "/post",

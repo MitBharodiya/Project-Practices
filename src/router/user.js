@@ -1,5 +1,5 @@
 import express from "express";
-import userController from "../controller/user.Controller.js"; // Ensure this path is correct
+import userController from "../controller/user.Controller.js";
 const router = express.Router();
 
 // router.post('/', userController.createUser);
