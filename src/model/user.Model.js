@@ -2,16 +2,11 @@ import mongoose from "mongoose";
 
 // Create a Schema for the User
 const userSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,  // Make sure the name is required
-    trim: true       // Trim spaces around the name
-  },
   username: {
     type: String,
     trim: true,
-    unique: true,
-    // required: true,
+    // unique: true,
+    required: true,
   },
   mobile:{
     type: String,

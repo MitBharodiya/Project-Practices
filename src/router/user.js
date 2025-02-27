@@ -128,7 +128,5 @@ router.delete("/:id", userController.deleteUser);
  * */
 router.get("/", userController.getAllUser);
 
-router.use('/auth', userController.authRoutes);
-
 // router.put("/recoverAccount", userController.recoverAccount);
 export default router;

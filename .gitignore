@@ -5,10 +5,10 @@ node_modules/
 # .env
 
 # Ignore log files
-# *.log
+*.log
 
 # Ignore build/production files
-# /dist/
+/dist/
 
 # Ignore OS-specific files
-# .DS_Store
+.DS_Store

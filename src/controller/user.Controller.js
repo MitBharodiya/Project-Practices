@@ -11,7 +11,7 @@ class UserController {
     try {
       const userData = req.body;
       const createdUser = await this.userService.createUser(userData);
-      logger.info(`User created: ${createdUser._id}`);
+      // logger.info(`User created: ${createdUser._id}`);
       return res.status(201).json(createSuccess("user", createdUser));
     } catch (error) {
       if (error.message.includes("User already exists")){
@@ -28,7 +28,7 @@ class UserController {
       const userId = req.params.id;
       if(!userId) return res.status(400).json(returnError(400, "User id is required"));
       const user = await this.userService.getUser(userId);
-      logger.info(`User fetched: ${user._id}`);
+      // logger.info(`User fetched: ${user._id}`);
       return res.status(200).json(getSuccess("user", user));
     } catch (error) {
       if(error.message.includes("User not found")){
@@ -86,15 +86,6 @@ class UserController {
       return res.status(500).json(returnError(500, error));
     }
   }
-
-  authRoutes = async(req,res)=>{
-    try {
-      
-    } catch (error) {
-      
-    }
-  }
-
 
   // recoverAccount = async(req,res)=>{
   //   try {
